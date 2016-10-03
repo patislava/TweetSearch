@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TweetSearchCore", "TweetSearchCore\TweetSearchCore.shproj", "{C9707109-12B8-401A-9E8C-851DD57A464A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSearchConsole", "TwwetSearchConsole\TweetSearchConsole.csproj", "{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSearchWPF", "TweetSearchWPF\TweetSearchWPF.csproj", "{EA91126D-25DF-4767-B9E6-4666C63AC33D}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TweetSearchCore\TweetSearchCore.projitems*{c9707109-12b8-401a-9e8c-851dd57a464a}*SharedItemsImports = 13
+		TweetSearchCore\TweetSearchCore.projitems*{ea91126d-25df-4767-b9e6-4666c63ac33d}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
