@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TweetSearchCore
+﻿namespace TweetSearchWPF
 {
     public class InputValidator : IInputValidator
     {
         public bool Validate(string input)
         {
-            string pattern = @"(?<=#)\w+";
+            string pattern = @"^#\w+$";
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(input, pattern))
+            if (System.Text.RegularExpressions.Regex.IsMatch(input, pattern) && input.Length <= 140)
             {
                 return true;
             }

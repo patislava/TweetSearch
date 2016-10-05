@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TweetSearchCore;
+using TweetSearchWPF;
+using TweetSharp;
 
 namespace TweetSearchConsole
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             TweetSearch tweetSearch = new TweetSearch(ConfigurationManager.AppSettings[0], ConfigurationManager.AppSettings[1],
                 ConfigurationManager.AppSettings[2], ConfigurationManager.AppSettings[3]);
@@ -24,12 +23,12 @@ namespace TweetSearchConsole
 
                 if (validator.Validate(inputHashtag))
                 {
-                    var response = tweetSearch.SearchTweets(inputHashtag);
+                    IEnumerable<TwitterStatus> response = tweetSearch.SearchTweets(inputHashtag);
                     
-                    if (response.Count() > 0)
+                    if (response.Any())
                     {
                         foreach (var r in response)
-                            Console.WriteLine(r.User + ":\n" + r.Text + "\n=======================================================\n");
+                            Console.WriteLine(r.User.Name + ":\n" + r.Text + "\n" + new string('-', 94) + "\n");
                     }
                     else
                     {

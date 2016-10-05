@@ -1,8 +1,9 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Configuration;
 using System.Linq;
-using TweetSearchCore;
 using System.ComponentModel;
+using TweetSharp;
 
 namespace TweetSearchWPF
 {
@@ -28,11 +29,12 @@ namespace TweetSearchWPF
             {
                 textBox.Clear();
 
-                var response = tweetSearch.SearchTweets(inputHashtag.Text);
-                if (response.Count() > 0)
+                IEnumerable<TwitterStatus> response = tweetSearch.SearchTweets(inputHashtag.Text);
+
+                if (response.Any())
                 {
                     foreach (var tweet in response)
-                        textBox.AppendText(tweet.User + ":\n" + tweet.Text + "\n=======================================================\n");
+                        textBox.AppendText(tweet.User.Name + ":\n" + tweet.Text + "\n" + new string('-', 94) + "\n");
                 }
                 else
                 {

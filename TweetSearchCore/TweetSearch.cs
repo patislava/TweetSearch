@@ -1,39 +1,33 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using TweetSharp;
-using TweetSharp.Model;
 
-namespace TweetSearchCore
+namespace TweetSearchWPF
 {
     public class TweetSearch : ITweetSearch
     {
-        private TwitterService twitterService;
+        private readonly TwitterService _twitterService;
 
         public TweetSearch(string consumerKey, string consumerSecret, string accessToken, string accessSecret)
         {
-            twitterService = new TwitterService(consumerKey, consumerSecret);
-            twitterService.AuthenticateWith(accessToken, accessSecret);
+            _twitterService = new TwitterService(consumerKey, consumerSecret);
+            _twitterService.AuthenticateWith(accessToken, accessSecret);
         }
 
         public IEnumerable<TwitterStatus> SearchTweets(string hashTag)
         {
-            TwitterSearchResult tweetsToSearch = null;
+            TwitterSearchResult tweetsToSearch;
 
             try
             {
-                tweetsToSearch = twitterService.Search(new SearchOptions { Q = hashTag, Resulttype = TwitterSearchResultType.Popular, });
+                tweetsToSearch = _twitterService.Search(new SearchOptions { Q = hashTag, Resulttype = TwitterSearchResultType.Popular, });
             }
             catch (WebException ex)
             {
                 throw new WebException(ex.Message);
             }
 
-            if (tweetsToSearch == null)
-            {
-                return null;
-            }
-
-            return tweetsToSearch.Statuses;
+            return tweetsToSearch?.Statuses;
         }
     }
 }

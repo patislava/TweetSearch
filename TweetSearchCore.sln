@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 14
+# Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TweetSearchCore", "TweetSearchCore\TweetSearchCore.shproj", "{C9707109-12B8-401A-9E8C-851DD57A464A}"
@@ -8,6 +8,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSearchConsole", "TwwetSearchConsole\TweetSearchConsole.csproj", "{A380583A-12B6-43BA-AECB-67F7D0CFA0E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSearchWPF", "TweetSearchWPF\TweetSearchWPF.csproj", "{EA91126D-25DF-4767-B9E6-4666C63AC33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSearchUnitTests", "TweetSearchUnitTests\TweetSearchUnitTests.csproj", "{5BBCBC77-F121-49CF-A124-B8B01ECEE9B3}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA91126D-25DF-4767-B9E6-4666C63AC33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBCBC77-F121-49CF-A124-B8B01ECEE9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBCBC77-F121-49CF-A124-B8B01ECEE9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBCBC77-F121-49CF-A124-B8B01ECEE9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBCBC77-F121-49CF-A124-B8B01ECEE9B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
